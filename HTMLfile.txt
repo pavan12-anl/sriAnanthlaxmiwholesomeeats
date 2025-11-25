@@ -155,7 +155,7 @@
 <body>
   <div class="container">
     <header>
-      <img src="SALWE/SRIlogo.jpg" alt="Sri Ananthlaxmi Wholesome Eats logo" class="logo">
+      <img src="SRIlogo.jpg" alt="Sri Ananthlaxmi Wholesome Eats logo" class="logo">
       <div>
         <h1>Sri Ananthlaxmi <small>Wholesome Eats</small></h1>
         <small class="tagline">Naturally Nutritious • Authentically Delicious</small>
@@ -166,7 +166,7 @@
 
       <!-- Product 1 -->
       <div class="card">
-        <div class="media"><img src="SALWE/copperhandled3.jpg" alt="Copper Handled Gift"></div>
+        <div class="media"><img src="copperhandled3.jpg" alt="Copper Handled Gift"></div>
         <div class="content">
           <h2 class="title">Copper Handled Gift Bag</h2>
           <p class="desc">Elegant handcrafted red bag with copper handles. Ideal for festive gifting and hampers.</p>
@@ -179,7 +179,7 @@
 
       <!-- Product 2 -->
       <div class="card">
-        <div class="media"><img src="SALWE/cowbag.jpg" alt="Green Gift Bag"></div>
+        <div class="media"><img src="cowbag.jpg" alt="Green Gift Bag"></div>
         <div class="content">
           <h2 class="title">Green Gift Bag</h2>
           <p class="desc">Eco-friendly green bag with golden handles. Durable and reusable for multiple occasions.</p>
@@ -192,7 +192,7 @@
 
       <!-- Product 3 -->
       <div class="card">
-        <div class="media"><img src="SALWE/flowercopperbox4.jpg" alt="Copper Gift Box"></div>
+        <div class="media"><img src="flowercopperbox4.jpg" alt="Copper Gift Box"></div>
         <div class="content">
           <h2 class="title">Copper Gift Box</h2>
           <p class="desc">A perfect festive combo box with premium handcrafted packaging. Ideal for gifting.</p>
@@ -205,7 +205,7 @@
 
       <!-- Product 4 -->
       <div class="card">
-        <div class="media"><img src="SALWE/handbag.jpg" alt="Hand Bag"></div>
+        <div class="media"><img src="handbag.jpg" alt="Hand Bag"></div>
         <div class="content">
           <h2 class="title">Hand Bag</h2>
           <p class="desc">Stylish bag for sweets, dry fruits, or return gifts. Sustainable and reusable.</p>
@@ -218,7 +218,7 @@
 
       <!-- Product 5 -->
       <div class="card">
-        <div class="media"><img src="SALWE/loveshapedcopperhandled.jpg" alt="Love Shaped Copper Handle"></div>
+        <div class="media"><img src="loveshapedcopperhandled.jpg" alt="Love Shaped Copper Handle"></div>
         <div class="content">
           <h2 class="title">Love-Shaped Copper Handle</h2>
           <p class="desc">Beautiful handcrafted bag with a love-shaped copper handle — perfect for special occasions.</p>
@@ -231,7 +231,7 @@
 
       <!-- Product 6 -->
       <div class="card">
-        <div class="media"><img src="SALWE/Redbag.jpg" alt="Red Bag"></div>
+        <div class="media"><img src="Redbag.jpg" alt="Red Bag"></div>
         <div class="content">
           <h2 class="title">Red Gift Bag</h2>
           <p class="desc">Bright red bag with gold handles. Adds festive charm to your gifts.</p>
@@ -244,7 +244,7 @@
 
       <!-- Product 7 -->
       <div class="card">
-        <div class="media"><img src="SALWE/silverhandledcowbox.jpg" alt="Silver Handled Box"></div>
+        <div class="media"><img src="silverhandledcowbox.jpg" alt="Silver Handled Box"></div>
         <div class="content">
           <h2 class="title">Silver Handled Cow Box</h2>
           <p class="desc">Premium silver-handled box with a cultural motif, perfect for festive gifting.</p>
@@ -257,7 +257,7 @@
 
       <!-- Product 8 -->
       <div class="card">
-        <div class="media"><img src="SALWE/Transparentcover.jpg" alt="Transparent Bag"></div>
+        <div class="media"><img src="Transparentcover.jpg" alt="Transparent Bag"></div>
         <div class="content">
           <h2 class="title">Transparent Cover Bag</h2>
           <p class="desc">Clear transparent bag ideal for sweets or dry fruits with an elegant finish.</p>
@@ -270,7 +270,7 @@
 
       <!-- Product 9 -->
       <div class="card">
-        <div class="media"><img src="SALWE/coppercowplatewithceramicbox.jpg" alt="Copper Plate with ceramic box"></div>
+        <div class="media"><img src="coppercowplatewithceramicbox.jpg" alt="Copper Plate with ceramic box"></div>
         <div class="content">
           <h2 class="title">Copper Cow Plate</h2>
           <p class="desc">Elegant copper plate with ceramic box, perfect for pooja or gifting.</p>
@@ -283,7 +283,7 @@
 
       <!-- Product 10 -->
       <div class="card">
-        <div class="media"><img src="SALWE/bluepouch.jpg" alt="Blue Pouch"></div>
+        <div class="media"><img src="bluepouch.jpg" alt="Blue Pouch"></div>
         <div class="content">
           <h2 class="title">Blue Pouch Bag</h2>
           <p class="desc">Elegant blue pouch for sweets, dry fruits, or accessories.</p>
@@ -296,7 +296,7 @@
 
       <!-- Product 11 -->
       <div class="card">
-        <div class="media"><img src="SALWE/whitejutebag.jpg" alt="White Jute Bag"></div>
+        <div class="media"><img src="whitejutebag.jpg" alt="White Jute Bag"></div>
         <div class="content">
           <h2 class="title">White Jute Bag</h2>
           <p class="desc">Eco-friendly white jute bag ideal for return gifts and festive occasions.</p>
@@ -317,3 +317,4 @@
   </script>
 </body>
 </html>
+
