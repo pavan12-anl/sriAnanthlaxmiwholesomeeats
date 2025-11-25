@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -47,8 +47,8 @@
     }
 
     header .logo {
-      width: -120px;
-      height: 50px;
+      width: -160px;
+      height: 60px;
       border-radius: 10px;
       object-fit: cover;
     }
@@ -73,6 +73,23 @@
       color: #c4c9d4;
     }
 
+    /* Filter */
+    .filter-bar {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+
+    .filter-bar select {
+      background: var(--card);
+      border: 1px solid #232a35;
+      border-radius: 8px;
+      padding: 8px 12px;
+      color: var(--text);
+      font-size: 14px;
+      cursor: pointer;
+    }
+
     /* Product Grid */
     .grid {
       display: grid;
@@ -82,11 +99,15 @@
     }
 
     .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       background: var(--card);
       border: 1px solid #232a35;
       border-radius: var(--radius);
       overflow: hidden;
       transition: transform .2s ease, box-shadow .2s ease;
+      min-height: 520px;
     }
 
     .card:hover {
@@ -98,35 +119,47 @@
       width: 100%;
       height: 220px;
       object-fit: cover;
-      display: block;
     }
 
-    .content { padding: 16px; }
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 16px;
+    }
 
     .title {
       font-weight: 700;
+      font-size: 1.1rem;
       margin: 0 0 8px;
+      text-align: center;
     }
 
     .desc {
-      margin: 8px 0 12px;
+      flex-grow: 1;
       color: var(--muted);
+      text-align: center;
+      margin: 8px 0 16px;
+      line-height: 1.4;
+      min-height: 60px;
     }
 
     .price {
       font-size: 20px;
       font-weight: 700;
-      background: linear-gradient(90deg,#fff,#f7d77a,#f1b02a);
+      background: linear-gradient(90deg, #fff, #f7d77a, #f1b02a);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      text-align: center;
+      margin-bottom: 10px;
     }
 
     .actions {
-      margin-top: 14px;
+      margin-top: auto;
       display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .btn {
@@ -162,147 +195,146 @@
       </div>
     </header>
 
-    <div class="grid">
+    <!-- Filter Dropdown -->
+    <div class="filter-bar">
+      <select id="priceFilter">
+        <option value="default">Sort by Price</option>
+        <option value="lowToHigh">Low to High</option>
+        <option value="highToLow">High to Low</option>
+      </select>
+    </div>
 
-      <!-- Product 1 -->
-      <div class="card">
-        <div class="media"><img src="SALWE/copperhandled3.jpg" alt="Copper Handled Gift"></div>
+    <!-- Product Grid -->
+    <div class="grid" id="productGrid">
+
+      <div class="card" data-price="300">
+        <div class="media"><img src="SALWE/copperhandled.jpg" alt="Copper Handled Gift"></div>
         <div class="content">
-          <h2 class="title">Copper Handled Gift Bag</h2>
-          <p class="desc">Elegant handcrafted red bag with copper handles. Ideal for festive gifting and hampers.</p>
+          <h2 class="title">Copper Handled</h2>
+          <p class="desc">Elegant handcrafted copper handles. Ideal for festive gifting and hampers.</p>
           <div class="price">₹300</div>
           <div class="actions">
-            <a class="btn primary" href="https://wa.me/919440685654?text=Hi%20Sri%20Ananthlaxmi,%20I%20want%20the%20Copper%20Handled%20Gift%20Bag%20(₹300).">Order on WhatsApp</a>
+            <a class="btn primary" href="https://wa.me/919440685654?text=Hello!%20I'm%20interested%20in%20the%20product%20'Copper%20Handled'%20from%20Sri%20Ananthlaxmi%20Wholesome%20Eats.">Order on WhatsApp</a>
           </div>
         </div>
       </div>
 
-      <!-- Product 2 -->
-      <div class="card">
+      <div class="card" data-price="250">
         <div class="media"><img src="SALWE/cowbag.jpg" alt="Green Gift Bag"></div>
         <div class="content">
           <h2 class="title">Green Gift Bag</h2>
           <p class="desc">Eco-friendly green bag with golden handles. Durable and reusable for multiple occasions.</p>
           <div class="price">₹250</div>
           <div class="actions">
-            <a class="btn primary" href="https://wa.me/919440685654?text=Hi%20Sri%20Ananthlaxmi,%20I%20want%20the%20Green%20Bag%20(₹250).">Order on WhatsApp</a>
+            <a class="btn primary" href="https://wa.me/919440685654?text=Hello!%20I'm%20interested%20in%20the%20product%20'Green%20Gift%20Bag'%20from%20Sri%20Ananthlaxmi%20Wholesome%20Eats.">Order on WhatsApp</a>
           </div>
         </div>
       </div>
 
-      <!-- Product 3 -->
-      <div class="card">
+      <div class="card" data-price="350">
         <div class="media"><img src="SALWE/flowercopperbox4.jpg" alt="Copper Gift Box"></div>
         <div class="content">
           <h2 class="title">Copper Gift Box</h2>
           <p class="desc">A perfect festive combo box with premium handcrafted packaging. Ideal for gifting.</p>
           <div class="price">₹350</div>
           <div class="actions">
-            <a class="btn primary" href="https://wa.me/919440685654?text=Hi%20Sri%20Ananthlaxmi,%20I%20want%20the%20Copper%20Gift%20Box%20(₹350).">Order on WhatsApp</a>
+            <a class="btn primary" href="https://wa.me/919440685654?text=Hello!%20I'm%20interested%20in%20the%20product%20'Copper%20Gift%20Box'%20from%20Sri%20Ananthlaxmi%20Wholesome%20Eats.">Order on WhatsApp</a>
           </div>
         </div>
       </div>
 
-      <!-- Product 4 -->
-      <div class="card">
+      <div class="card" data-price="380">
         <div class="media"><img src="SALWE/handbag.jpg" alt="Hand Bag"></div>
         <div class="content">
           <h2 class="title">Hand Bag</h2>
           <p class="desc">Stylish bag for sweets, dry fruits, or return gifts. Sustainable and reusable.</p>
           <div class="price">₹380</div>
           <div class="actions">
-            <a class="btn primary" href="https://wa.me/919440685654?text=Hi%20Sri%20Ananthlaxmi,%20I%20want%20the%20Hand%20Bag%20(₹380).">Order on WhatsApp</a>
+            <a class="btn primary" href="https://wa.me/919440685654?text=Hello!%20I'm%20interested%20in%20the%20product%20'Hand%20Bag'%20from%20Sri%20Ananthlaxmi%20Wholesome%20Eats.">Order on WhatsApp</a>
           </div>
         </div>
       </div>
 
-      <!-- Product 5 -->
-      <div class="card">
+      <div class="card" data-price="350">
         <div class="media"><img src="SALWE/loveshapedcopperhandled.jpg" alt="Love Shaped Copper Handle"></div>
         <div class="content">
           <h2 class="title">Love-Shaped Copper Handle</h2>
           <p class="desc">Beautiful handcrafted bag with a love-shaped copper handle — perfect for special occasions.</p>
           <div class="price">₹350</div>
           <div class="actions">
-            <a class="btn primary" href="https://wa.me/919440685654?text=Hi%20Sri%20Ananthlaxmi,%20I%20want%20the%20Love-Shaped%20Copper%20Bag%20(₹350).">Order on WhatsApp</a>
+            <a class="btn primary" href="https://wa.me/919440685654?text=Hello!%20I'm%20interested%20in%20the%20product%20'Love-Shaped%20Copper%20Handle'%20from%20Sri%20Ananthlaxmi%20Wholesome%20Eats.">Order on WhatsApp</a>
           </div>
         </div>
       </div>
 
-      <!-- Product 6 -->
-      <div class="card">
-        <div class="media"><img src="SALWE/Redbag.jpg" alt="Red Bag"></div>
+      <div class="card" data-price="370">
+        <div class="media"><img src="SALWE/Redbag2.jpg" alt="Red Bag"></div>
         <div class="content">
           <h2 class="title">Red Gift Bag</h2>
           <p class="desc">Bright red bag with gold handles. Adds festive charm to your gifts.</p>
           <div class="price">₹370</div>
           <div class="actions">
-            <a class="btn primary" href="https://wa.me/919440685654?text=Hi%20Sri%20Ananthlaxmi,%20I%20want%20the%20Red%20Gift%20Bag%20(₹370).">Order on WhatsApp</a>
+            <a class="btn primary" href="https://wa.me/919440685654?text=Hello!%20I'm%20interested%20in%20the%20product%20'Red%20Gift%20Bag'%20from%20Sri%20Ananthlaxmi%20Wholesome%20Eats.">Order on WhatsApp</a>
           </div>
         </div>
       </div>
 
-      <!-- Product 7 -->
-      <div class="card">
+      <div class="card" data-price="450">
         <div class="media"><img src="SALWE/silverhandledcowbox.jpg" alt="Silver Handled Box"></div>
         <div class="content">
           <h2 class="title">Silver Handled Cow Box</h2>
           <p class="desc">Premium silver-handled box with a cultural motif, perfect for festive gifting.</p>
           <div class="price">₹450</div>
           <div class="actions">
-            <a class="btn primary" href="https://wa.me/919440685654?text=Hi%20Sri%20Ananthlaxmi,%20I%20want%20the%20Silver%20Handled%20Cow%20Box%20(₹450).">Order on WhatsApp</a>
+            <a class="btn primary" href="https://wa.me/919440685654?text=Hello!%20I'm%20interested%20in%20the%20product%20'Silver%20Handled%20Cow%20Box'%20from%20Sri%20Ananthlaxmi%20Wholesome%20Eats.">Order on WhatsApp</a>
           </div>
         </div>
       </div>
 
-      <!-- Product 8 -->
-      <div class="card">
+      <div class="card" data-price="300">
         <div class="media"><img src="SALWE/Transparentcover.jpg" alt="Transparent Bag"></div>
         <div class="content">
           <h2 class="title">Transparent Cover Bag</h2>
           <p class="desc">Clear transparent bag ideal for sweets or dry fruits with an elegant finish.</p>
           <div class="price">₹300</div>
           <div class="actions">
-            <a class="btn primary" href="https://wa.me/919440685654?text=Hi%20Sri%20Ananthlaxmi,%20I%20want%20the%20Transparent%20Cover%20Bag%20(₹300).">Order on WhatsApp</a>
+            <a class="btn primary" href="https://wa.me/919440685654?text=Hello!%20I'm%20interested%20in%20the%20product%20'Transparent%20Cover%20Bag'%20from%20Sri%20Ananthlaxmi%20Wholesome%20Eats.">Order on WhatsApp</a>
           </div>
         </div>
       </div>
 
-      <!-- Product 9 -->
-      <div class="card">
+      <div class="card" data-price="600">
         <div class="media"><img src="SALWE/coppercowplatewithceramicbox.jpg" alt="Copper Plate with ceramic box"></div>
         <div class="content">
           <h2 class="title">Copper Cow Plate</h2>
           <p class="desc">Elegant copper plate with ceramic box, perfect for pooja or gifting.</p>
           <div class="price">₹600</div>
           <div class="actions">
-            <a class="btn primary" href="https://wa.me/919440685654?text=Hi%20Sri%20Ananthlaxmi,%20I%20want%20the%20Copper%20Cow%20Plate%20(₹600).">Order on WhatsApp</a>
+            <a class="btn primary" href="https://wa.me/919440685654?text=Hello!%20I'm%20interested%20in%20the%20product%20'Copper%20Cow%20Plate'%20from%20Sri%20Ananthlaxmi%20Wholesome%20Eats.">Order on WhatsApp</a>
           </div>
         </div>
       </div>
 
-      <!-- Product 10 -->
-      <div class="card">
+      <div class="card" data-price="350">
         <div class="media"><img src="SALWE/bluepouch.jpg" alt="Blue Pouch"></div>
         <div class="content">
           <h2 class="title">Blue Pouch Bag</h2>
           <p class="desc">Elegant blue pouch for sweets, dry fruits, or accessories.</p>
           <div class="price">₹350</div>
           <div class="actions">
-            <a class="btn primary" href="https://wa.me/919440685654?text=Hi%20Sri%20Ananthlaxmi,%20I%20want%20the%20Blue%20Pouch%20Bag%20(₹350).">Order on WhatsApp</a>
+            <a class="btn primary" href="https://wa.me/919440685654?text=Hello!%20I'm%20interested%20in%20the%20product%20'Blue%20Pouch%20Bag'%20from%20Sri%20Ananthlaxmi%20Wholesome%20Eats.">Order on WhatsApp</a>
           </div>
         </div>
       </div>
 
-      <!-- Product 11 -->
-      <div class="card">
+      <div class="card" data-price="400">
         <div class="media"><img src="SALWE/whitejutebag.jpg" alt="White Jute Bag"></div>
         <div class="content">
           <h2 class="title">White Jute Bag</h2>
           <p class="desc">Eco-friendly white jute bag ideal for return gifts and festive occasions.</p>
           <div class="price">₹400</div>
           <div class="actions">
-            <a class="btn primary" href="https://wa.me/919440685654?text=Hi%20Sri%20Ananthlaxmi,%20I%20want%20the%20White%20Jute%20Bag%20(₹400).">Order on WhatsApp</a>
+            <a class="btn primary" href="https://wa.me/919440685654?text=Hello!%20I'm%20interested%20in%20the%20product%20'White%20Jute%20Bag'%20from%20Sri%20Ananthlaxmi%20Wholesome%20Eats.">Order on WhatsApp</a>
           </div>
         </div>
       </div>
@@ -314,6 +346,25 @@
 
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Price sorting logic
+    const filter = document.getElementById('priceFilter');
+    const grid = document.getElementById('productGrid');
+
+    filter.addEventListener('change', () => {
+      const cards = Array.from(grid.children);
+      const value = filter.value;
+
+      if (value === 'lowToHigh') {
+        cards.sort((a, b) => a.dataset.price - b.dataset.price);
+      } else if (value === 'highToLow') {
+        cards.sort((a, b) => b.dataset.price - a.dataset.price);
+      } else {
+        return;
+      }
+
+      cards.forEach(card => grid.appendChild(card));
+    });
   </script>
 </body>
 </html>
