@@ -188,7 +188,7 @@
 <body>
   <div class="container">
     <header>
-      <img src="SRIlogo.jpeg" alt="Sri Ananthlaxmi Wholesome Eats logo" class="logo">
+      <img src="SRIlogo.jpg" alt="Sri Ananthlaxmi Wholesome Eats logo" class="logo">
       <div>
         <h1>Sri Ananthlaxmi <small>Wholesome Eats</small></h1>
         <small class="tagline">Naturally Nutritious • Authentically Delicious</small>
